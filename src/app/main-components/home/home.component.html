@@ -1,0 +1,23 @@
+
+<div class="app">
+  <div class="container">
+
+    <h3 class="header" >Angular Workplace - SBB Yazılım Park</h3>
+    <div class="row ">
+        <div class="col-md-auto" align="center"  *ngFor="let app of apps">
+            <div class="card" [style.background-color]="app.secondaryColor" >
+                <div class="imgBx">
+                  <img [src]="app.srcImage">
+                </div>
+                <div class="contentBx">
+                  <h2 [style.color]="app.primaryColor">{{app.name}}</h2>
+                  <div class="description">
+                      <h5>{{app.description}}</h5>
+                  </div>
+                  <a [style.background-color]="app.primaryColor"  [routerLink]="app.routerLink">Go to app</a>
+                </div>
+              </div>
+        </div>
+    </div>  
+</div>
+</div>
